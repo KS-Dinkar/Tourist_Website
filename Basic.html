@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-bs-theme="dark">
 <head>
+<style>
+header{
+background-color: #00BAF0;
+  background: linear-gradient(to right, #6B2D5C, #E0E5E5);
+padding:5px;
+}
+
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Map Website</title>
+    <title>GeoGlide</title>
+
+
 </head>
+
+
 <body>
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+      <img
+        id="header-img"
+        class="navbar-logo"
+        src="C:\Users\ADYASHA\Downloads\WhatsApp Image 2023-10-26 at 6.02.43 PM.jpeg"
+        alt="Learn "
+      />
+    </div>
+  </header>
+<!--HamBurger Icon-->
+<div class="bars" id="nav-action">
+  <span class="bar"> </span>
+</div>
+
+<!--Navbar Links-->
+<nav id="nav">
+  <ul>
+<li class="shape-circle circle-one"><a href="#">erfwrkfhwur3fht</a></li>
+    <li class="shape-circle circle-two"><a href="#">Blog</a></li>
+
+    <li class="shape-circle circle-three"><a href="#">
+</a></li>
+
+
+  
+    <li class="shape-circle circle-five">
+      <a href="https://www.linkedin.com/in/neha-vatsavai-489aa8248/"><div class="circle-content">
+<h2>Contact Us</h2>
+
+        </div></a>
+    </li>
+  </ul>
+</nav>
+
     <div class="container">
         <!-- Left Side -->
+
         <div class="left-container">
+
+ 
+<div class="slider"></div>
+<div class="image-grid">
+  <!-- Your image grid content here -->
+</div>
+ <div class="text-container" id="text1">
+                <p>Text 1</p>
+            </div>
             <div class="image-container" id="image1">
                 <img src="image1.jpg" alt="Image 1">
+
+            </div>
+
+
+ <div class="text-container" id="text2">
+                <p>Text 1</p>
             </div>
             <div class="image-container" id="image2">
                 <img src="image2.jpg" alt="Image 2">
             </div>
-            <div class="text-container" id="text1">
+            <div class="text-container" id="text3">
                 <p>Text 1</p>
             </div>
-        </div>
+</div>
+           
+        
         <!-- Right Side (Google Map) -->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYgMyqbeMUwiH-mUoAndKBrER3HKvlNFE&callback=initMap"></script>
         <script src="script.js"></script>
         <div class="right-container" id="map"></div>
     </div>
+
+
 </body>
 </html>

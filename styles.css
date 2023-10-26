@@ -1,38 +1,250 @@
 /* Add your CSS styles here */
+/* styles.css */
+body {
+    margin: auto;
+    padding: 0;
+border: 0px;
+}
+
+
 .container {
     display: flex;
-    justify-content: space-between;
+    padding-top: 5px;
     align-items: stretch;
+    margin: 0px;
+border: 0px;
+background-color:#313131;
 }
+
 
 .left-container {
     flex: 1;
     display: flex;
     flex-direction: column;
+margin:0;
+padding: 0;
+border: 0px;
+
 }
+
 
 .image-container{
-    width:200px;
-    height:300px;
+    width:1500px;
+    height:1500px;
+}
+/* Styles for the text box above the grid */
+.text-box {
+  background-color: #f0f0f0;
+  
+  text-align: center;
+  font-weight: bold;
+color:#fffff;
+padding: 10px;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 10px; /* Gap between images */
+
 }
 
+.image-container {
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin-bottom: 20px; /* Add some space between the image grid and text */
+}
+
+
+
 .linked-image {
-  width: 200px;
-  height: 150px;
+  width: 123px;
+  height: 123px;
   /* Other styles as needed */
 }
 
 .text-container {
-    padding: 20px;
+    padding: 15px;
     transition: background-color 0.3s;
+    height: 30px;
+
 }
 
 .image-container:hover,
 .text-container:hover {
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 .right-container {
     flex: 2;
-    height: 700px; /* Set an appropriate height for your map */
+    height: 800px; /* Set an appropriate height for your map */
+width: 400px;
+}
+
+p{
+font-size:22px;
+vertical-align: top;
+color:#fff;
+}
+.text3 p{
+font-size:16px;
+color:#fff;}
+
+.navbar-logo{
+width: 150px;
+height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bars {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 12px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 101;
+  padding-top:9px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  position: absolute;
+}
+
+span::before,
+span::after {
+  content: "";
+  display: block;
+  background-color: #000000;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+.bar::before {
+  transform: translateY(-9px);
+}
+
+.bar::after {
+  transform: translateY(9px);
+}
+
+.bars.active .bar {
+  background-color: transparent;
+}
+
+.bars.active span::before {
+  animation: top-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+  animation: bottom-bar 1s;
+  animation-fill-mode: forwards;
+}
+
+
+/* Navbar Links CSS */
+
+#nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#nav a {
+  color:#D3D3D3;
+  text-decoration: none;
+  line-height: 70vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-indent: 50vw;
+  border-radius: 10%;
+  transition: all .5s;
+}
+
+#nav a:hover {
+  background: #6B2D5C;
+}
+
+ul {
+  list-style: none;
+}
+
+.visible {
+  z-index: 100 !important;
+  opacity: 1 !important;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  right: -10vw;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background-color: #00BAF0;
+  background: linear-gradient(to right, #6B2D5C, #E0E5E5);
+  box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:last-child{
+  width: 50vw;
+  height: 50vw;
+  top: -25vw;
+  right: -25vw;
+  z-index: 8;
+  transition: all .8s ease-in-out;
+  box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+
+nav.visible li:last-child a {
+  line-height: 70vw !important;
+  text-indent:12vw !important;
+}
+
+
+
+@keyframes top-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+}
+
+@keyframes bottom-bar {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+
+
+@media screen and (max-width:800px) {
+
+  h1 {
+    padding-top:80px;
+    font-size: 60px;
+  }
 }
